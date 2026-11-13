@@ -35,6 +35,7 @@
   var burger = $('#burger'), menu = $('#menu'), nav = $('.nav');
   function setMenu(open) {
     document.body.classList.toggle('menu-open', open);
+    root.classList.toggle('menu-lock', open);
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
   }
