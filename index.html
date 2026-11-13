@@ -4,374 +4,394 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Элитстройсервис-Актобе — строительная компания с 2001 года</title>
-  <meta name="description" content="ТОО «Элитстройсервис-Актобе» — строительная компания из Актобе: 25 лет на рынке. Строительство школ, детских садов, административных и жилых зданий, инженерных сетей водоснабжения и канализации. Генеральный подряд.">
-  <meta name="theme-color" content="#0b2e6b" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#08111f" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="ТОО «Элитстройсервис-Актобе» — 25 лет в строительстве. Генеральный подряд: школы, детские сады, жилые и административные здания, сети водоснабжения и канализации в Актюбинской области.">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Элитстройсервис-Актобе — 25 лет в строительстве">
-  <meta property="og:description" content="Генеральный подряд: школы, детские сады, жилые и административные здания, инженерные сети в Актюбинской области.">
-  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:description" content="Генеральный подряд: школы, детские сады, жилые и административные здания, инженерные сети.">
+  <meta property="og:image" content="assets/photos/reservoir-1200.jpg">
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=PT+Serif:wght@700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/photos/reservoir-1200.webp" imagesrcset="assets/photos/reservoir-800.webp 800w, assets/photos/reservoir-1200.webp 1204w" imagesizes="(max-width: 900px) 100vw, 45vw">
   <link rel="stylesheet" href="css/styles.css">
   <script>
-    // Применяем тему до отрисовки, чтобы не было «мигания»
     (function () {
       try {
         var t = localStorage.getItem('essa-theme');
         if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
+      document.documentElement.classList.add('js');
     })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "ТОО «Элитстройсервис-Актобе»",
+    "foundingDate": "2001",
+    "telephone": ["+77089897896", "+77132401477"],
+    "email": "essa-aktobe@mail.ru",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Гастелло, 14",
+      "addressLocality": "Актобе",
+      "addressCountry": "KZ"
+    },
+    "areaServed": ["Актюбинская область", "Костанайская область"],
+    "image": "assets/photos/reservoir-1200.jpg",
+    "logo": "assets/logo.png"
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
 
-  <!-- ============ ШАПКА ============ -->
-  <header class="header" id="top">
-    <div class="container header__inner">
+  <!-- ===================== НАВИГАЦИЯ ===================== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
       <a class="brand" href="#top" aria-label="Элитстройсервис-Актобе — на главную">
         <svg class="brand__mark" viewBox="0 0 120 64" aria-hidden="true">
-          <path d="M8 58 L36 34 L44 40 L20 58Z" />
-          <rect x="40" y="6" width="9" height="22" />
-          <path d="M28 58 L62 4 L96 58 L84 58 L62 22 L40 58Z" />
-          <path d="M80 34 L92 22 L116 58 L104 58 L92 40 L86 46Z" />
-          <rect x="55" y="30" width="6" height="6" /><rect x="63" y="30" width="6" height="6" />
-          <rect x="55" y="38" width="6" height="6" /><rect x="63" y="38" width="6" height="6" />
+          <path d="M8 58 L36 34 L44 40 L20 58Z"/><rect x="40" y="6" width="9" height="22"/>
+          <path d="M28 58 L62 4 L96 58 L84 58 L62 22 L40 58Z"/><path d="M80 34 L92 22 L116 58 L104 58 L92 40 L86 46Z"/>
+          <rect x="55" y="30" width="6" height="6"/><rect x="63" y="30" width="6" height="6"/>
+          <rect x="55" y="38" width="6" height="6"/><rect x="63" y="38" width="6" height="6"/>
         </svg>
-        <span class="brand__text">
-          <span class="brand__name">Элитстройсервис</span>
-          <span class="brand__city">Актобе</span>
-        </span>
+        <span class="brand__text"><span class="brand__name">Элитстройсервис</span><span class="brand__city">Актобе</span></span>
       </a>
 
-      <nav class="nav" id="nav" aria-label="Основное меню">
+      <nav class="nav__links" id="menu" aria-label="Основное меню">
         <a href="#about">О компании</a>
         <a href="#services">Услуги</a>
+        <a href="#process">Как работаем</a>
         <a href="#projects">Объекты</a>
         <a href="#clients">Заказчики</a>
         <a href="#contacts">Контакты</a>
-        <a class="nav__phone" href="tel:+77089897896">+7 708 989 78 96</a>
+        <div class="nav__mobile-extra">
+          <a class="btn btn--primary btn--lg" href="tel:+77089897896">Позвонить: +7 708 989 78 96</a>
+          <a class="btn btn--secondary btn--lg" href="https://wa.me/77089897896" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        </div>
       </nav>
 
-      <div class="header__actions">
-        <a class="header__phone" href="tel:+77089897896">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
-          <span>+7 708 989 78 96</span>
-        </a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
-          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg>
-          <span class="theme-toggle__label">Тема</span>
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Переключить тему">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg>
         </button>
-        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-controls="nav" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contacts">Связаться</a>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- ============ ГЛАВНЫЙ ЭКРАН ============ -->
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__grid"></div>
-        <svg class="hero__skyline" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice">
-          <g class="sky-far">
-            <rect x="20" y="170" width="70" height="190"/><rect x="100" y="120" width="56" height="240"/>
-            <rect x="170" y="200" width="90" height="160"/><rect x="420" y="140" width="60" height="220"/>
-            <rect x="760" y="160" width="80" height="200"/><rect x="980" y="110" width="64" height="250"/>
-            <rect x="1180" y="180" width="90" height="180"/><rect x="1300" y="130" width="60" height="230"/>
-          </g>
-          <g class="sky-near">
-            <rect x="60" y="230" width="110" height="130"/><rect x="260" y="180" width="80" height="180"/>
-            <rect x="350" y="250" width="120" height="110"/><rect x="520" y="210" width="90" height="150"/>
-            <rect x="620" y="150" width="70" height="210"/><rect x="860" y="230" width="130" height="130"/>
-            <rect x="1060" y="200" width="100" height="160"/><rect x="1240" y="250" width="130" height="110"/>
-          </g>
-          <g class="crane">
-            <rect x="706" y="40" width="10" height="320"/>
-            <rect x="600" y="40" width="300" height="9"/>
-            <path d="M711 40 L711 10 L760 40Z"/>
-            <rect x="618" y="49" width="2" height="90"/>
-            <rect x="606" y="139" width="26" height="16"/>
-            <rect x="860" y="49" width="34" height="22"/>
-          </g>
-        </svg>
-      </div>
 
-      <div class="container hero__inner">
-        <div class="hero__content reveal">
-          <p class="eyebrow"><span class="dot"></span> С 2001 года · Актобе, Казахстан</p>
-          <h1 class="hero__title">Строим школы, дома и&nbsp;инженерные сети <span class="accent">25&nbsp;лет</span></h1>
-          <p class="hero__lead">ТОО «Элитстройсервис-Актобе» — генеральный подрядчик полного цикла: строительство, реконструкция и капитальный ремонт зданий и сооружений, монтаж сетей водоснабжения, канализации и электроснабжения по всему Казахстану.</p>
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#contacts">Обсудить проект</a>
-            <a class="btn btn--ghost" href="#projects">Смотреть объекты</a>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow" data-anim>ТОО «Элитстройсервис-Актобе» · с 2001 года</p>
+          <h1 class="hero__title" data-anim>Строим то,<br>что служит <span class="grad">десятилетиям.</span></h1>
+          <p class="hero__lead" data-anim>Генеральный подрядчик полного цикла: школы, детские сады, жилые и административные здания, сети водоснабжения и канализации по всему Казахстану.</p>
+          <div class="hero__cta" data-anim>
+            <a class="btn btn--primary btn--lg" href="#contacts">Обсудить проект</a>
+            <a class="link-arrow" href="#projects">Смотреть 40 объектов</a>
           </div>
         </div>
+        <figure class="hero__media" data-anim>
+          <picture>
+            <source type="image/webp" srcset="assets/photos/reservoir-800.webp 800w, assets/photos/reservoir-1200.webp 1204w" sizes="(max-width: 900px) 100vw, 45vw">
+            <img id="heroImg" src="assets/photos/reservoir-1200.jpg" srcset="assets/photos/reservoir-800.jpg 800w, assets/photos/reservoir-1200.jpg 1204w" sizes="(max-width: 900px) 100vw, 45vw" width="1204" height="1600" alt="Гидротехническое сооружение Актюбинского водохранилища под голубым небом" fetchpriority="high">
+          </picture>
+          <figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Актюбинское водохранилище, г. Актобе</figcaption>
+        </figure>
+      </div>
+      <a class="hero__scroll" href="#about" aria-label="Прокрутить вниз"><span></span></a>
+    </section>
 
-        <ul class="stats reveal" aria-label="Компания в цифрах">
-          <li class="stat"><strong class="stat__num" data-count="25">25</strong><span class="stat__label">лет на рынке</span></li>
-          <li class="stat"><strong class="stat__num" data-count="40" data-suffix="+">40+</strong><span class="stat__label">сданных объектов</span></li>
-          <li class="stat"><strong class="stat__num" data-count="14">14</strong><span class="stat__label">объектов образования</span></li>
-          <li class="stat"><strong class="stat__num" data-count="2">2</strong><span class="stat__label">области: Актюбинская и Костанайская</span></li>
+    <!-- ===================== 25 ЛЕТ ===================== -->
+    <section class="statement" id="about">
+      <div class="wrap">
+        <div class="statement__big reveal">
+          <span class="statement__num" data-count="25">25</span>
+          <span class="statement__unit">лет<br>на рынке</span>
+        </div>
+        <p class="statement__text" id="scrub">
+          ТОО «Элитстройсервис-Актобе» — крупная казахстанская компания, созданная в 2001 году. Мы строим объекты образования и дошкольного образования, социально-культурного назначения, административные здания, инженерные сети и жилые комплексы. И отвечаем за каждый из них.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== ЦИФРЫ ===================== -->
+    <section class="figures">
+      <div class="wrap">
+        <ul class="figures__list">
+          <li class="reveal"><strong><span data-count="40">40</span>+</strong><span>сданных объектов</span></li>
+          <li class="reveal"><strong data-count="14">14</strong><span>школ, садов и вузовских корпусов</span></li>
+          <li class="reveal"><strong data-count="15">15</strong><span>объектов инженерной инфраструктуры</span></li>
+          <li class="reveal"><strong>№&nbsp;008053</strong><span>государственная лицензия от 29.01.2002</span></li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ О КОМПАНИИ ============ -->
-    <section class="section" id="about">
-      <div class="container about">
-        <div class="about__text reveal">
-          <p class="section__kicker">О компании</p>
-          <h2 class="section__title">Крупная казахстанская компания с&nbsp;четвертьвековым опытом</h2>
-          <p>ТОО «Элитстройсервис-Актобе» создано в <strong>2001 году</strong>. Основное направление деятельности — строительство объектов образования и дошкольного образования, социально-культурного назначения, административных зданий, инженерных сетей, а также жилых комплексов.</p>
-          <p>Специалисты компании имеют опыт строительства, реконструкции и капитального ремонта зданий и сооружений на территории Казахстана. Мы выполняем электрификацию, канализацию и водоснабжение, изоляционные, футеровочные и монтажные работы в промышленном и гражданском строительстве.</p>
-          <div class="license">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg>
-            <div>
-              <strong>Государственная лицензия № 008053 от 29.01.2002</strong>
-              <span>Разрешение (уведомление) выдано в соответствии с Законом РК «О разрешениях и уведомлениях»</span>
+    <!-- ===================== УСЛУГИ (BENTO) ===================== -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="head__kicker">Услуги</p>
+          <h2 class="head__title">Всё для объекта.<br><span class="muted">Под одним подрядом.</span></h2>
+        </header>
+
+        <div class="bento">
+          <article class="tile tile--photo tile--tall reveal">
+            <picture>
+              <source type="image/webp" srcset="assets/photos/reservoir-800.webp 800w, assets/photos/reservoir-1200.webp 1204w" sizes="(max-width: 900px) 100vw, 40vw">
+              <img src="assets/photos/reservoir-800.jpg" width="800" height="1063" alt="" loading="lazy">
+            </picture>
+            <div class="tile__body">
+              <p class="tile__kicker">Инженерные сети</p>
+              <h3>Водоснабжение, канализация, насосные станции.</h3>
+              <p>Строим и реконструируем наружные сети и распределительные трубопроводы в городах и районах области.</p>
             </div>
-          </div>
-        </div>
-        <div class="about__card reveal">
-          <div class="logo-card">
-            <img src="assets/logo.png" alt="Логотип Элитстройсервис-Актобе" width="1200" height="413" loading="lazy">
-          </div>
-          <div class="timeline">
-            <div class="timeline__item"><span>2001</span><p>Основание компании в Актобе</p></div>
-            <div class="timeline__item"><span>2002</span><p>Получена государственная лицензия на СМР</p></div>
-            <div class="timeline__item"><span>2004–2009</span><p>Жилые комплексы, бизнес-центр «Мир», ТД «Айна», ТАБК «Алматы»</p></div>
-            <div class="timeline__item"><span>2010–2020</span><p>Школы, детский сад, корпуса университета им.&nbsp;К.&nbsp;Жубанова, областной музей</p></div>
-            <div class="timeline__item"><span>2014–2022</span><p>Сети водоснабжения и канализации в районах Актюбинской и Костанайской областей</p></div>
-            <div class="timeline__item"><span>2026</span><p>25 лет на строительном рынке Казахстана</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ УСЛУГИ ============ -->
-    <section class="section section--alt" id="services">
-      <div class="container">
-        <div class="section__head reveal">
-          <p class="section__kicker">Услуги</p>
-          <h2 class="section__title">Строительно-монтажные работы полного цикла</h2>
-          <p class="section__sub">Выступаем генеральным подрядчиком, субподрядчиком и генеральным проектировщиком.</p>
-        </div>
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2v4L12 21l7-3.8v-4L12 17l-7-3.8z"/></svg></div>
-            <h3>Объекты образования</h3>
-            <p>Школы, детские сады, учебные корпуса университетов и колледжей — строительство под ключ и капитальный ремонт.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12h-6v-7H9v7H3z"/></svg></div>
+
+          <article class="tile tile--brand tile--wide reveal">
+            <p class="tile__kicker">Объекты образования</p>
+            <h3>Школы, детские сады, корпуса университетов.</h3>
+            <p>14 сданных объектов: от школы на 120 мест в п. Сага до 5-этажного корпуса университета им. К. Жубанова.</p>
+            <span class="tile__big" aria-hidden="true">14</span>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile__icon"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12h-6v-7H9v7H3z"/></svg></div>
             <h3>Жилые комплексы</h3>
-            <p>Строительство многоквартирных жилых домов и жилых комплексов, капитальный ремонт жилого фонда.</p>
+            <p>Строительство жилых домов и капитальный ремонт жилого фонда.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6h2a2 2 0 0 1 2 2v10h-6v-4h-4v4H4zm4-16v2h2V6H8zm4 0v2h2V6h-2zm-4 4v2h2v-2H8zm4 0v2h2v-2h-2z"/></svg></div>
-            <h3>Административные и коммерческие здания</h3>
-            <p>Бизнес-центры, торговые дома, административно-бытовые комплексы, музеи и спортивные объекты.</p>
+
+          <article class="tile reveal">
+            <div class="tile__icon"><svg viewBox="0 0 24 24"><path d="M4 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6h2a2 2 0 0 1 2 2v10h-6v-4h-4v4H4zm4-16v2h2V6H8zm4 0v2h2V6h-2zm-4 4v2h2v-2H8zm4 0v2h2v-2h-2z"/></svg></div>
+            <h3>Общественные здания</h3>
+            <p>Бизнес-центры, торговые дома, музей, спортивные и административные объекты.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 2s-7 7.6-7 12.5A7 7 0 0 0 19 14.5C19 9.6 12 2 12 2zm0 18a5 5 0 0 1-5-5h2a3 3 0 0 0 3 3v2z"/></svg></div>
-            <h3>Водоснабжение и канализация</h3>
-            <p>Строительство и реконструкция наружных сетей, насосных станций и распределительных трубопроводов.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+
+          <article class="tile reveal">
+            <div class="tile__icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
             <h3>Электрификация</h3>
-            <p>Электроснабжение объектов, монтаж внутренних и наружных электросетей в промышленном и гражданском строительстве.</p>
+            <p>Электроснабжение объектов, внутренние и наружные сети.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M22.7 19 13.6 9.9c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg></div>
-            <h3>Изоляционные, футеровочные и монтажные работы</h3>
-            <p>Специальные работы на промышленных и гражданских объектах, реконструкция и капитальный ремонт.</p>
+
+          <article class="tile tile--dark tile--wide reveal">
+            <p class="tile__kicker">Специальные работы</p>
+            <h3>Изоляционные, футеровочные и монтажные работы.</h3>
+            <p>В промышленном и гражданском строительстве. А также реконструкция и капитальный ремонт зданий и сооружений.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ ПРЕИМУЩЕСТВА ============ -->
-    <section class="section" id="why">
-      <div class="container">
-        <div class="section__head reveal">
-          <p class="section__kicker">Почему мы</p>
-          <h2 class="section__title">Выполняем обязательства качественно и в срок</h2>
-        </div>
-        <div class="features">
-          <div class="feature reveal"><span class="feature__num">01</span><h3>Качество и гарантии</h3><p>Качественное выполнение взятых на себя обязательств и гарантия на все проведённые работы.</p></div>
-          <div class="feature reveal"><span class="feature__num">02</span><h3>Индивидуальный подход</h3><p>Адаптируемся к требованиям каждого заказчика и особенностям каждого проекта.</p></div>
-          <div class="feature reveal"><span class="feature__num">03</span><h3>Опытная команда</h3><p>Специалисты с многолетним опытом строительства, реконструкции и капремонта по всему Казахстану.</p></div>
-          <div class="feature reveal"><span class="feature__num">04</span><h3>Надёжные партнёры</h3><p>Тесно сотрудничаем со строительными и монтажными компаниями и ведущими поставщиками материалов.</p></div>
-          <div class="feature reveal"><span class="feature__num">05</span><h3>Минимум простоев</h3><p>Профессиональная организация работ сокращает простои и сроки сдачи объектов.</p></div>
-          <div class="feature reveal"><span class="feature__num">06</span><h3>Работа с госзаказом</h3><p>Многолетний опыт работы с государственными заказчиками, акиматами и республиканскими предприятиями.</p></div>
+    <!-- ===================== ПОЧЕМУ МЫ ===================== -->
+    <section class="section section--alt" id="why">
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="head__kicker">Почему мы</p>
+          <h2 class="head__title">Обязательства — выполняем.<br><span class="muted">Сроки — соблюдаем.</span></h2>
+        </header>
+        <div class="why">
+          <div class="why__item reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg><h3>Гарантия на работы</h3><p>Качественно выполняем взятые обязательства и даём гарантию на результат.</p></div>
+          <div class="why__item reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg><h3>Индивидуальный подход</h3><p>Адаптируемся к требованиям каждого заказчика и особенностям проекта.</p></div>
+          <div class="why__item reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.7 0-8 1.3-8 4v3h16v-3c0-2.7-5.3-4-8-4zm8 0h-1c1.2.9 2 2.1 2 4v3h7v-3c0-2.7-5.3-4-8-4z"/></svg><h3>Опытная команда</h3><p>Специалисты с многолетним опытом строительства, реконструкции и капремонта.</p></div>
+          <div class="why__item reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg><h3>Надёжные поставщики</h3><p>Работаем с ведущими поставщиками материалов и монтажными компаниями.</p></div>
+          <div class="why__item reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg><h3>Минимум простоев</h3><p>Профессиональная организация работ сокращает простои и сроки сдачи.</p></div>
+          <div class="why__item reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7v2h20V7L12 2zM4 11v7h3v-7H4zm6.5 0v7h3v-7h-3zM17 11v7h3v-7h-3zM2 20v2h20v-2H2z"/></svg><h3>Опыт госзаказа</h3><p>Многолетняя работа с акиматами, госучреждениями и республиканскими предприятиями.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ОБЪЕКТЫ ============ -->
+    <!-- ===================== КАК РАБОТАЕМ ===================== -->
+    <section class="section" id="process">
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="head__kicker">Как работаем</p>
+          <h2 class="head__title">Четыре шага от заявки<br><span class="muted">до сданного объекта.</span></h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step__n">01</span><h3>Заявка</h3><p>Вы описываете задачу — звонком, в WhatsApp или через форму на сайте.</p></li>
+          <li class="step reveal"><span class="step__n">02</span><h3>Расчёт и условия</h3><p>Изучаем документацию, считаем объём работ и согласуем сроки и стоимость.</p></li>
+          <li class="step reveal"><span class="step__n">03</span><h3>Строительство</h3><p>Ведём работы как генеральный подрядчик и держим вас в курсе на каждом этапе.</p></li>
+          <li class="step reveal"><span class="step__n">04</span><h3>Сдача и гарантия</h3><p>Сдаём объект заказчику и сопровождаем его в гарантийный период.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== ОБЪЕКТЫ ===================== -->
     <section class="section section--alt" id="projects">
-      <div class="container">
-        <div class="section__head reveal">
-          <p class="section__kicker">Портфолио</p>
-          <h2 class="section__title">Реализованные объекты</h2>
-          <p class="section__sub">Перечень завершённых работ с указанием статуса компании, местоположения и заказчика.</p>
-        </div>
-
-        <div class="filters reveal" role="toolbar" aria-label="Фильтр объектов">
-          <div class="chips" id="chips">
-            <button class="chip is-active" data-filter="all" type="button">Все <span class="chip__count"></span></button>
-            <button class="chip" data-filter="edu" type="button">Образование <span class="chip__count"></span></button>
-            <button class="chip" data-filter="civil" type="button">Социальные и коммерческие <span class="chip__count"></span></button>
-            <button class="chip" data-filter="housing" type="button">Жилые дома <span class="chip__count"></span></button>
-            <button class="chip" data-filter="eng" type="button">Инженерные сети <span class="chip__count"></span></button>
+      <div class="wrap">
+        <header class="head head--row reveal">
+          <div>
+            <p class="head__kicker">Портфолио</p>
+            <h2 class="head__title">Реализованные объекты.</h2>
           </div>
           <label class="search">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg>
-            <input id="search" type="search" placeholder="Поиск: школа, Эмба, водоснабжение…" aria-label="Поиск по объектам">
+            <input id="search" type="search" placeholder="Поиск по объектам" aria-label="Поиск по объектам">
           </label>
+        </header>
+
+        <div class="tabs reveal" id="tabs" role="tablist" aria-label="Категории объектов">
+          <span class="tabs__pill" aria-hidden="true"></span>
+          <button class="tab is-active" role="tab" aria-selected="true" data-filter="all" type="button">Все <sup></sup></button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="edu" type="button">Образование <sup></sup></button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="civil" type="button">Общественные <sup></sup></button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="housing" type="button">Жилые <sup></sup></button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="eng" type="button">Инженерные сети <sup></sup></button>
         </div>
 
         <div class="projects" id="projectsList" aria-live="polite"></div>
-        <p class="projects__empty" id="projectsEmpty" hidden>По вашему запросу ничего не найдено.</p>
-        <div class="projects__more">
-          <button class="btn btn--ghost" id="showMore" type="button">Показать ещё</button>
-        </div>
+        <p class="projects__empty" id="projectsEmpty" hidden>Ничего не найдено. Попробуйте другой запрос.</p>
+        <div class="projects__more"><button class="btn btn--secondary" id="showMore" type="button">Показать ещё</button></div>
       </div>
     </section>
 
-    <!-- ============ ЗАКАЗЧИКИ ============ -->
-    <section class="section" id="clients">
-      <div class="container">
-        <div class="section__head reveal">
-          <p class="section__kicker">Нам доверяют</p>
-          <h2 class="section__title">Наши заказчики</h2>
-        </div>
-        <ul class="clients reveal">
-          <li>ГУ «Отдел строительства города Актобе»</li>
-          <li>Актюбинский региональный государственный университет им.&nbsp;К.&nbsp;Жубанова</li>
-          <li>РГП «Казводхоз» Комитета по водным ресурсам РК</li>
-          <li>ГУ «Управление строительства, архитектуры и градостроительства Актюбинской области»</li>
-          <li>Актюбинский областной филиал АО «Казпочта»</li>
-          <li>АО «Социально-предпринимательская корпорация „Актобе“»</li>
-          <li>Отделы ЖКХ, пассажирского транспорта и автодорог Актобе, Мугалжарского, Иргизского, Шалкарского и Байганинского районов</li>
-          <li>ГУ «Отдел строительства» акимата Костанайского района</li>
-          <li>ГУ «Управление образования Актюбинской области»</li>
-          <li>ТОО «СКС+», ЗАО «КТП», ТОО «ПромРесурс»</li>
+    <!-- ===================== ГАЛЕРЕЯ (появится, когда будут фото) ===================== -->
+    <section class="section" id="gallery" hidden>
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="head__kicker">Фотографии</p>
+          <h2 class="head__title">Наши объекты.</h2>
+        </header>
+        <div class="gallery" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ЗАКАЗЧИКИ ===================== -->
+    <section class="section clients-section" id="clients">
+      <div class="wrap">
+        <header class="head head--center reveal">
+          <p class="head__kicker">Нам доверяют</p>
+          <h2 class="head__title">Государственные и частные заказчики.</h2>
+        </header>
+      </div>
+      <div class="marquee" aria-label="Список заказчиков">
+        <ul class="marquee__track">
+          <li>Отдел строительства города Актобе</li>
+          <li>АРГУ им. К. Жубанова</li>
+          <li>РГП «Казводхоз»</li>
+          <li>Управление строительства Актюбинской области</li>
+          <li>АО «Казпочта»</li>
+          <li>СПК «Актобе»</li>
+          <li>Управление образования Актюбинской области</li>
+          <li>Акимат Костанайского района</li>
+          <li>ТОО «СКС+»</li>
+          <li>ЗАО «КТП»</li>
+          <li>ТОО «ПромРесурс»</li>
+          <li>КГП «Эмбажылу»</li>
+          <li>ГКП «Коммунальщик»</li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ ОБРАЩЕНИЕ ДИРЕКТОРА ============ -->
-    <section class="section section--brand" id="letter">
-      <div class="container letter reveal">
-        <svg class="letter__quote" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38V24c0-8 4-14 13-16l2 4c-5 1.5-7.5 4.5-8 9h7v17H8zm20 0V24c0-8 4-14 13-16l2 4c-5 1.5-7.5 4.5-8 9h7v17H28z"/></svg>
+    <!-- ===================== ДИРЕКТОР ===================== -->
+    <section class="quote">
+      <div class="wrap quote__inner reveal">
         <blockquote>
-          <p>Предлагаем провести диалог о возможности сотрудничества. Мы обеспечиваем качественное выполнение взятых на себя обязательств и индивидуальный подход к каждому проекту, минимальное время простоя и гарантии на проведённые работы. Мы всегда готовы к плодотворному и взаимовыгодному сотрудничеству.</p>
+          <p>«Мы обеспечиваем качественное выполнение взятых на себя обязательств и индивидуальный подход к каждому проекту. Всегда готовы к плодотворному и взаимовыгодному сотрудничеству».</p>
         </blockquote>
-        <p class="letter__author"><strong>Умиров Юсуф Бурбаевич</strong><span>Директор ТОО «Элитстройсервис-Актобе»</span></p>
+        <p class="quote__author"><strong>Умиров Юсуф Бурбаевич</strong><span>Директор ТОО «Элитстройсервис-Актобе»</span></p>
       </div>
     </section>
 
-    <!-- ============ КОНТАКТЫ ============ -->
+    <!-- ===================== КОНТАКТЫ ===================== -->
     <section class="section" id="contacts">
-      <div class="container contacts">
+      <div class="wrap contacts">
         <div class="contacts__info reveal">
-          <p class="section__kicker">Контакты</p>
-          <h2 class="section__title">Обсудим ваш проект</h2>
-          <p class="section__sub">Свяжитесь с нами удобным способом — ответим и подготовим предложение.</p>
+          <p class="head__kicker">Контакты</p>
+          <h2 class="head__title">Давайте обсудим<br>ваш проект.</h2>
 
-          <div class="contact-person">
-            <div class="avatar" aria-hidden="true">ЮА</div>
-            <div>
-              <span class="muted">Контактное лицо</span>
+          <a class="person" href="tel:+77089897896">
+            <span class="person__avatar" aria-hidden="true">ЮА</span>
+            <span class="person__body">
+              <span class="person__role">Контактное лицо</span>
               <strong>Юсуф Айбек Юсуфович</strong>
-              <a href="tel:+77089897896">+7 708 989 78 96</a>
-            </div>
-          </div>
+              <span class="person__phone">+7 708 989 78 96</span>
+            </span>
+            <span class="person__call" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>
+          </a>
 
-          <ul class="contact-list">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><div><span class="muted">Офис</span><a href="tel:+77132401477">+7 (7132) 40-14-77</a></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 2.8-8 5-8-5V17h16V9.8z"/></svg><div><span class="muted">Email</span><a href="mailto:essa-aktobe@mail.ru">essa-aktobe@mail.ru</a></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div><span class="muted">Адрес</span><span>Казахстан, г. Актобе, ул. Гастелло, 14</span></div></li>
-          </ul>
+          <dl class="clist">
+            <div><dt>Офис</dt><dd><a href="tel:+77132401477">+7 (7132) 40-14-77</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:essa-aktobe@mail.ru">essa-aktobe@mail.ru</a></dd></div>
+            <div><dt>Адрес</dt><dd>г. Актобе, ул. Гастелло, 14 <a class="link-arrow link-arrow--sm" href="https://yandex.kz/maps/?text=%D0%90%D0%BA%D1%82%D0%BE%D0%B1%D0%B5%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%93%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%BE%2C%2014" target="_blank" rel="noopener">Маршрут</a></dd></div>
+          </dl>
 
-          <div class="contact-buttons">
-            <a class="btn btn--whatsapp" href="https://wa.me/77089897896" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
-              Написать в WhatsApp
-            </a>
-            <a class="btn btn--ghost" href="tel:+77089897896">Позвонить</a>
-          </div>
+          <a class="btn btn--whatsapp btn--lg" href="https://wa.me/77089897896" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            Написать в WhatsApp
+          </a>
         </div>
 
         <form class="form reveal" id="contactForm" novalidate>
           <h3>Оставить заявку</h3>
-          <label class="field">
-            <span>Ваше имя</span>
-            <input name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться">
-          </label>
-          <label class="field">
-            <span>Телефон</span>
-            <input name="phone" type="tel" autocomplete="tel" required placeholder="+7 (___) ___-__-__">
-          </label>
-          <label class="field">
-            <span>Тип работ</span>
-            <select name="type">
+          <p class="form__sub">Ответим в рабочее время и подготовим предложение.</p>
+          <div class="field">
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required>
+            <label for="f-name">Ваше имя</label>
+          </div>
+          <div class="field">
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder=" " required>
+            <label for="f-phone">Телефон</label>
+          </div>
+          <div class="field field--select">
+            <select id="f-type" name="type">
               <option>Строительство здания</option>
               <option>Реконструкция / капитальный ремонт</option>
-              <option>Инженерные сети (водоснабжение, канализация)</option>
+              <option>Инженерные сети</option>
               <option>Электрификация</option>
               <option>Изоляционные / монтажные работы</option>
               <option>Другое</option>
             </select>
-          </label>
-          <label class="field">
-            <span>Описание проекта</span>
-            <textarea name="message" rows="4" placeholder="Кратко опишите объект, сроки и объём работ"></textarea>
-          </label>
+            <label for="f-type">Тип работ</label>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="message" rows="4" placeholder=" "></textarea>
+            <label for="f-msg">Кратко о проекте (необязательно)</label>
+          </div>
           <div class="form__actions">
-            <button class="btn btn--primary" type="submit" data-via="whatsapp">Отправить в WhatsApp</button>
-            <button class="btn btn--ghost" type="submit" data-via="email">Отправить на email</button>
+            <button class="btn btn--primary btn--lg" type="submit" data-via="whatsapp">Отправить в WhatsApp</button>
+            <button class="btn btn--secondary btn--lg" type="submit" data-via="email">На email</button>
           </div>
           <p class="form__note" id="formNote" role="status"></p>
         </form>
       </div>
 
-      <div class="container map reveal">
-        <iframe title="Карта: г. Актобе, ул. Гастелло, 14" src="https://yandex.kz/map-widget/v1/?text=%D0%90%D0%BA%D1%82%D0%BE%D0%B1%D0%B5%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%93%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%BE%2C%2014&amp;z=16" loading="lazy" allowfullscreen></iframe>
+      <div class="wrap">
+        <div class="map reveal">
+          <iframe title="Карта: г. Актобе, ул. Гастелло, 14" src="https://yandex.kz/map-widget/v1/?text=%D0%90%D0%BA%D1%82%D0%BE%D0%B1%D0%B5%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%93%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%BE%2C%2014&amp;z=16" loading="lazy" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ============ ПОДВАЛ ============ -->
+  <!-- ===================== ПОДВАЛ ===================== -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <strong>ТОО «Элитстройсервис-Актобе»</strong>
-        <span>Строительная компания с 2001 года. Лицензия № 008053 от 29.01.2002.</span>
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <strong>ТОО «Элитстройсервис-Актобе»</strong>
+          <p>Строительная компания с 2001 года. Государственная лицензия № 008053 от 29.01.2002.</p>
+        </div>
+        <div><h4>Компания</h4><a href="#about">О компании</a><a href="#why">Преимущества</a><a href="#process">Как работаем</a><a href="#clients">Заказчики</a></div>
+        <div><h4>Работы</h4><a href="#services">Услуги</a><a href="#projects">Объекты</a></div>
+        <div><h4>Связь</h4><a href="tel:+77089897896">+7 708 989 78 96</a><a href="tel:+77132401477">+7 (7132) 40-14-77</a><a href="mailto:essa-aktobe@mail.ru">essa-aktobe@mail.ru</a><span>г. Актобе, ул. Гастелло, 14</span></div>
       </div>
-      <nav class="footer__nav" aria-label="Нижнее меню">
-        <a href="#about">О компании</a>
-        <a href="#services">Услуги</a>
-        <a href="#projects">Объекты</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-      <div class="footer__contacts">
-        <a href="tel:+77089897896">+7 708 989 78 96</a>
-        <a href="tel:+77132401477">+7 (7132) 40-14-77</a>
-        <a href="mailto:essa-aktobe@mail.ru">essa-aktobe@mail.ru</a>
+      <div class="footer__bottom">
+        <span>© 2001–<span id="year">2026</span> Элитстройсервис-Актобе</span>
+        <a href="#top">Наверх ↑</a>
       </div>
-    </div>
-    <div class="container footer__bottom">
-      <span>© 2001–<span id="year">2026</span> Элитстройсервис-Актобе. Все права защищены.</span>
-      <a href="#top" class="to-top">Наверх ↑</a>
     </div>
   </footer>
 
@@ -379,7 +399,15 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
   </a>
 
+  <!-- Просмотр фото -->
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр фотографии">
+    <button class="lightbox__close" type="button" aria-label="Закрыть">×</button>
+    <img alt="">
+    <p class="lightbox__caption"></p>
+  </dialog>
+
   <script src="js/projects.js"></script>
+  <script src="js/gallery.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
